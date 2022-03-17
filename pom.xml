@@ -9,11 +9,11 @@
 		<version>2.5.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.cassol</groupId>
-	<artifactId>marketplaces</artifactId>
+	<groupId>br.com.portal</groupId>
+	<artifactId>portal-loja</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>marketplaces</name>
-	<description>Projeto portal seller cassol</description>
+	<name>portal-loja</name>
+	<description>Projeto portal loja site</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -88,6 +88,22 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+		    <exclusion>
+		      <groupId>junit</groupId>
+		      <artifactId>junit</artifactId>
+		    </exclusion>
+		  </exclusions>			
+		</dependency>
+		<dependency>
+		  <groupId>org.junit.jupiter</groupId>
+		  <artifactId>junit-jupiter-api</artifactId>
+		  <scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.junit.jupiter</groupId>
+		  <artifactId>junit-jupiter-engine</artifactId>
+		  <scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -96,6 +112,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+			  <artifactId>maven-surefire-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
